@@ -1,0 +1,19 @@
+import csv
+r= open('tabela.csv','w')
+try:
+writer = csv.writer(r)
+writer.writerow('nome, **codigo**')
+writer.writerow('data, **DATA**')
+writer.writerow('horário de inicio, **inicio**')
+writer.writerow('horario de fim  do exprimento,**fim**')
+writer.writerow('alavanca ativa,** Aativa')
+writer.writerow('toques na Aativa,**numero**')
+writer.writerow('alavanca inativa,**Ainativa**')
+writer.writerow('toques na Ainativa,**numero**')
+writer.writerow('tipo de rotina realizada, **rotina**')
+writer.writerow('numero de acertos, ** numero**')
+writer.writerow('numero de erros,** numero**')
+writer.writerow('quantidades de recompensa liberada,** numero**')
+finally:
+  r.close()
+  print(open('tabela.csv',r).read())
